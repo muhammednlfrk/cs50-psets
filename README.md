@@ -1,2 +1,3 @@
-# cs50-psets
-Problem set solutions for CS50 2019's Introduction to Computer Science course in the @Kodluyoruz
+# Problem Solutions of Harvard CS50 2019's course
+
+Problem solutions are divided into weekly on the [source](src/) folder.
