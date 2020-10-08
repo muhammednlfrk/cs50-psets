@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<div class="col">
+    <form action="/compare" enctype="multipart/form-data" method="post">
+        <label for="file1">File 1:</label>
+        <input type="file" name="file1" id="file1">
+        <br>
+        <label for="file2">File 2:</label>
+        <input type="file" name="file2" id="file2">
+        <br>
+        <label for="algorithm">Algorithm:</label>
+        <select name="algorithm" id="algorithm" onclick="
+                let substringElement = document.getElementById('substrings');
+                let lengthElement = document.getElementById('length');
+                if (substringElement.selected == true) {
+                    lengthElement.disabled = false;
+                }
+                else {
+                    lengthElement.disabled = true;
+                }
+            ">
+            <option value="lines" selected>Lines</option>
+            <option value="sentences">Sentences</option>
+            <option value="substrings" id="substrings">Substrings</option>
+        </select>
+        <br>
+        <label for="length">Length</label>
+        <input type="number" name="length" id="length" disabled>
+        <br>
+        <input type="submit">
+        <br>
+    </form>
+</div>
+
+{% endblock %}
