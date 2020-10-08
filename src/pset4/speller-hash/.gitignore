@@ -1,0 +1,6 @@
+# Private files
+dictionaries/
+keys/
+texts/
+build.sh/
+Makefile
