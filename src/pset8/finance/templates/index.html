@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+{% block title %} Home {% endblock %}
+{% block main %}
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Symbol</th>
+        <th>Name</th>
+        <th>Shares</th>
+        <th>Price</th>
+        <th>Total</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for share in shares %}
+      <tr>
+        <td>{{ share["symbol"] | safe }}</td>
+        <td>{{ share["name"] | safe }}</td>
+        <td>{{ share["amount"] | safe }}</td>
+        <td>{{ share["price"] | safe }}</td>
+        <td>{{ share["total"] | safe }}</td>
+      </tr>
+      {% endfor %}
+      <tr>
+        <td colspan="4">CASH</td>
+        <td>{{ cash | safe }}</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="4"></td>
+        <td>{{ total | safe }}</td>
+      </tr>
+    </tfoot>
+  </table>
+{% endblock %}
