@@ -1,2 +1,5 @@
 # Flask app cache folder
 __pycache__/
+
+# Secret files
+*.secret*

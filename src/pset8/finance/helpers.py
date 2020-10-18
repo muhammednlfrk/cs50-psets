@@ -5,7 +5,9 @@ import os
 from flask import redirect, render_template, request, session
 from functools import wraps
 
-API_KEY = urllib.parse.quote_plus(os.environ.get('API_KEY'))
+from configurations import appsettings
+
+API_KEY = urllib.parse.quote_plus(appsettings["api-key"]) # urllib.parse.quote_plus(os.environ.get('API_KEY'))
 
 def apology(message, code=400):
     """Render message as an apology to user."""
